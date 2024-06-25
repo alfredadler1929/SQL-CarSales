@@ -1,0 +1,40 @@
+select * from sales
+select * from salesperson
+
+--Total Revenu by Models
+
+select brand,sum(price*quantity) as revenue
+from sales
+group by brand
+
+--Persentage of total sales by each model
+
+with cte as (
+    select brand, 
+           sum(price * quantity) as revenue,
+           sum(sum(price * quantity)) over () as total_revenue
+    from sales
+    group by brand
+)
+select brand, 
+       revenue,
+       total_revenue,
+       cast(revenue as float) / total_revenue *100 as revenue_percentage 
+from cte;
+
+--sales quantity difference by each day
+with cte as (select date,quantity,
+lead(quantity) over(order by date) as NextDay
+from sales)
+
+select date,cast(NextDay as int)-cast(quantity as int) as Diff
+from cte
+
+
+
+
+
+
+
+
+
