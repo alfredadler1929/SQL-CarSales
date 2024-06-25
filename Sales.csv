@@ -1,0 +1,11 @@
+Date,Brand,Price,Quantity,SalespersonID,Car Model,Car Color
+02/01/2023,Toyota,25000,3,101,Camry,Blue
+03/01/2023,Honda,28000,2,102,Accord,Silver
+05/01/2023,Ford,30000,1,103,Mustang,Red
+06/01/2023,Chevrolet,27000,4,104,Tahoe,Black
+07/01/2023,BMW,40000,2,105,3 Series,White
+09/01/2023,Mercedes,45000,3,106,E-Class,Gray
+10/01/2023,Audi,50000,1,107,A4,Blue
+11/01/2023,Nissan,26000,5,108,Altima,Silver
+12/01/2023,Hyundai,22000,3,109,Sonata,Red
+15/01/2023,Kia,24000,2,110,Optima,Black
